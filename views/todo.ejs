@@ -1,111 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Todo List APP test</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                background-color: #f4f4f4;
-                color: #333;
-                margin: 0;
-                padding: 0;
-            }
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator - By Code Traversal</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <input type="text" id="inputBox" placeholder="0" />
+        <div>
+          <button class="button1">AC</button>
+          <button class="button1">DEL</button>
+          <button class="button2">%</button>
+          <button class="button2">/</button>
+        </div>
+        <div>
+          <button class="button">7</button>
+          <button class="button">8</button>
+          <button class="button">9</button>
+          <button class="button2">*</button>
+        </div>
+        <div>
+          <button class="button">4</button>
+          <button class="button">5</button>
+          <button class="button">6</button>
+          <button class="button2">-</button>
+        </div>
+        <div>
+          <button class="button">1</button>
+          <button class="button">2</button>
+          <button class="button">3</button>
+          <button class="button2">+</button>
+        </div>
 
-            h1 {
-                background-color: #4CAF50;
-                color: white;
-                margin: 0;
-                padding: 20px;
-                text-align: center;
-            }
+        <div>
+          <button class="button">00</button>
+          <button class="button">0</button>
+          <button class="button">.</button>
+          <button class="button equalBtn">=</button>
+        </div>
+      </div>
+    </div>
 
-            ul {
-                list-style: none;
-                padding: 0;
-            }
-
-            ul li {
-                background: #fff;
-                border: 1px solid #ddd;
-                margin-bottom: 10px;
-                padding: 10px;
-                position: relative;
-            }
-
-            ul li a {
-                color: #333;
-                text-decoration: none;
-                font-weight: bold;
-            }
-
-            ul li a:hover {
-                color: #4CAF50;
-            }
-
-            .delete-btn {
-                color: red;
-                position: absolute;
-                right: 10px;
-                top: 10px;
-            }
-
-            .edit-btn {
-                color: #FFC107;
-                position: absolute;
-                right: 40px;
-                top: 10px;
-            }
-
-            form {
-                background: #fff;
-                padding: 20px;
-                margin-top: 20px;
-            }
-
-            label {
-                display: block;
-                margin-bottom: 10px;
-            }
-
-            input[type="text"] {
-                width: 100%;
-                padding: 10px;
-                margin-bottom: 10px;
-                border: 1px solid #ddd;
-            }
-
-            input[type="submit"] {
-                background-color: #4CAF50;
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                cursor: pointer;
-            }
-
-            input[type="submit"]:hover {
-                background-color: #45a049;
-            }
-        </style>
-    </head>
-
-    <body>
-        <h1>Todo List - Made for Batch 6</h1>
-        <ul>
-            <% todolist.forEach(function(todo, index) { %>
-            <li>
-                <a href="/todo/delete/<%= index %>" class="delete-btn">✘</a>
-                <a href="/todo/<%= index %>" class="edit-btn">✎</a>
-                <%- todo %>
-            </li>
-            <% }); %>
-        </ul>
-
-        <form action="/todo/add/" method="post">
-            <p>
-                <label for="newtodo">What should I do?</label>
-                <input type="text" name="newtodo" id="newtodo" autofocus />
-                <input type="submit" value="Add" />
-            </p>
-        </form>
-    </body>
+    <script src="script.js"></script>
+  </body>
 </html>
